@@ -14,7 +14,7 @@ const searchbtn = () => {
   if (inputFieldValue === "" || inputFieldValue === " ") {
     totalTitle.innerText = "Result Not found";
   } else {
-    const url = `http://openlibrary.org/search.json?q=${inputFieldValue}`;
+    const url = `https://openlibrary.org/search.json?q=${inputFieldValue}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => displayBook(data));
